@@ -13,3 +13,25 @@ INSERT INTO students ( ID , Name , Age , Gender , Points) VALUES (7 ,'Mahmoud' ,
 UPDATE students SET Points = 500 WHERE name = 'Basma' ; 
 # 7
 UPDATE students set Points = 100 WHERE name = 'Alex';
+
+
+# creating table 
+CREATE TABLE graduates (
+	ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	Name TEXT NOT NULL UNIQUE , 
+	Age INTEGER , 
+	Gender TEXT , 
+	Points INTEGER ,
+	Graduation TEXT
+) ;
+# 10
+INSERT INTO graduates (
+	Name , Age , Gender , Points 
+) SELECT Name , Age , Gender , Points FROM students WHERE name = 'Layal' ;
+
+# 11
+UPDATE graduates SET Graduation = '08/09/2018' WHERE name = 'Layal';
+
+# 12
+DELETE FROM students WHERE name = 'Layal' ;
+
