@@ -44,4 +44,17 @@ SELECT employees.name FROM employees JOIN companies on companies.id	= employees.
 # 16
 SELECT employees.name , employees.Role   FROM employees JOIN companies on companies.id	= employees.ID WHERE Role = 'Graphic Designer' ;
 
+# 18
+SELECT name FROM students  WHERE Points = (SELECT max(Points) FROM students);
 
+# 19
+SELECT avg(Points) FROM students  ;
+
+# 20
+SELECT count(Points) FROM students  WHERE Points = 500 ;
+
+# 21
+SELECT name FROM students  WHERE name LIKE '%s%';
+
+# 22
+SELECT * FROM students  order by points DESC ;
